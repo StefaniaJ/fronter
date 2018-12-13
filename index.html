@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Kea mobile app</title>
+</head>
+
+<body id="login-page">
+    <!-- KEA LOGO -->
+    <img class="KEAlogo" src="images/KEA.png" alt="Logo KEA">
+
+    <!-- Log in -->
+    <form action="/action_page.php">
+        <div class="container">
+            <label for="uname"></label>
+            <input id="input" type="text" placeholder="Username" name="uname" required>
+            <label for="psw"></label>
+            <input type="password" placeholder="Password" name="psw" required>
+        </div>
+
+        <div class="button ">
+            <button id="button" onclick="myFunction()" type="button"><b>Log In</b></button>
+        </div>
+        <div id="psw-login">
+            <span class="psw"><a href="#">Forgotten your password?</a></span>
+        </div>
+    </form>
+    <script>
+    function myFunction() {
+    window.location = 'main.html';
+}</script>
+</body>
+</html>

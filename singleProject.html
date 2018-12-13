@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the css File -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- The header area -->
+    <header id="header">
+        <!-- The Navigation Bar -->
+        <nav>
+            <!-- Logo (link to the Log in Page) -->
+            <a href="index.html"><img src="images/KEAlogo.png" id="logo" alt="KEA"></a>
+
+            <ul>
+                <li><a href="#"><i class="material-icons menu-icons"> chat</i></a></li>
+                <li><a href="#"><i class="material-icons menu-icons"> notification_important</i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Burger Menu Icon + Close -->
+    <div class="icon-header">
+        <span class="icon bar"></span>
+        <span class="icon bar color"></span>
+
+    </div>
+    <!-- Overlay Menu -->
+    <div class="click-menu">
+        <ul>
+            <li><a href="main.html">News</a></li>
+            <li><a href="main.html">Profile</a></li>
+            <li><a href="main.html">Notifications</a></li>
+            <li><a href="main.html">Chat</a></li>
+            <li><a href="main.html">MMD</a></li>
+            <li><a href="main.html">Portfolio</a></li>
+            <li><a href="main.html">Projects</a></li>
+            <li><a href="newProject.html">New Project</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+
+
+    <!-- The main area -->
+    <main id="create-body">
+
+        <h1 id="create-title">PERSONAL PROJECT</h1>
+
+
+        <!-- The name of the project -->
+        <form id="form" style="text-align: center">
+            <input type="text" id="project-name" name="title" placeholder="Project Title">
+            <br><br>
+
+            <!-- The Dropdown Menu for Private/Public -->
+            <select name="visibility" id="private">
+                <option value="Private">Private</option>
+                <option value="Public">Public</option>
+            </select>
+
+            <br><br><br><br>
+            <!-- The Create Project Button -->
+
+            <button type="submit" name="submit" id="create">Create Project</button>
+        </form>
+
+        <br><br><br><br><br><br><br><br><br><br>
+    </main>
+
+    <!-- The footer area -->
+    <footer id="footer">
+        <h6>&copy 2018 KEA </h6>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script>
+        let create = document.getElementById("create");
+
+        create.addEventListener("click", function(event) {
+            event.preventDefault();
+            window.location = 'emptyProject.html';
+        });
+    </script>
+
+
+</body>
+</html>

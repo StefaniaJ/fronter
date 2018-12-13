@@ -1,0 +1,601 @@
+/* Border Box */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Helvetica, sans-serif;
+}
+
+.menu-icons {
+    color: #EA4D44;
+}
+
+
+/* Body set up  */
+#login-page {
+    background-color: #EA4D44;
+}
+
+#main-page {
+    overflow-x: hidden;
+}
+
+
+
+/* ///////////// LOG IN PAGE //////////// */
+
+/* user name and password labels */
+#input {
+    width: 80%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    left: 40px;
+    top: 130px;
+}
+
+input[type=password] {
+    width: 80%;
+    padding: 12px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    font-size: 18px;
+    position: relative;
+    left: 40px;
+    top: 130px;
+}
+
+input:hover {
+    opacity: 0.9;
+}
+
+
+/* Kea Logo  */
+.KEAlogo {
+    position: relative;
+    left: 60px;
+    top: 50px;
+    width: 60%;
+
+}
+
+/*  Button - Log in */
+#button {
+    background-color: #cbc4c4;
+    color: #404040;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    position: relative;
+    left: 105px;
+    top: 125px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    box-shadow: 5px 10px 10px #625e5e;
+}
+
+/* Forgotten your password */
+span.psw {
+    font-size: 13px;
+    text-align: center;
+    position: relative;
+    left: 165px;
+    top: 200px;
+}
+
+#psw-login a,
+#psw-login a:link,
+#psw-login a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* ////////////MAIN PAGE////////////////*/
+
+/* Logo */
+#logo {
+    padding-top: 12px;
+    padding-left: 40px;
+}
+
+.material-icons.size {
+    font-size: 80px;
+}
+
+.icon-header {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 16px;
+    top: 20px;
+    height: 23px;
+    width: 27px;
+    z-index: 12;
+}
+
+/* Icon Bars */
+.bar {
+    background: white;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    height: 2px;
+    width: 20px;
+    transition: 0.4s;
+}
+
+.bar::before {
+    background: white;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -8px;
+    height: 2px;
+    width: 20px;
+    transition: 0.3s width 0.4s;
+}
+
+.bar::after {
+    margin-top: 0px;
+    background: white;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 2px;
+    width: 20px;
+    transition: 0.3s width 0.4s;
+}
+
+/* Bar Color */
+.bar.color {
+    background: #EA4D44;
+    width: 20px;
+    animation: secondBar 3s infinite 0.5s;
+}
+
+@keyframes secondBar {
+    0% {
+        width: 0px
+    }
+
+    50% {
+        width: 20px
+    }
+
+    100% {
+        width: 0px
+    }
+}
+
+.bar.color::before {
+    background: #EA4D44;
+    width: 10px;
+    animation: firstBar 3s infinite 0.2s;
+}
+
+@keyframes firstBar {
+    0% {
+        width: 0px
+    }
+
+    50% {
+        width: 10px
+    }
+
+    100% {
+        width: 0px
+    }
+}
+
+.bar.color::after {
+    background: #EA4D44;
+    width: 15px;
+    animation: thirdBar 3s infinite 1s;
+}
+
+@keyframes thirdBar {
+    0% {
+        width: 0px
+    }
+
+    50% {
+        width: 15px
+    }
+
+    100% {
+        width: 0px
+    }
+}
+
+/* Toggle Menu Icon */
+.icon-header {
+    position: fixed;
+}
+
+.icon-header.toggle .bar {
+    top: 5px;
+    transform: translate3d(0, 5px, 0) rotate(135deg);
+    transition-delay: 0.1s;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-header.toggle .bar::before {
+    top: 0;
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+
+.icon-header.toggle .bar::after {
+    top: 10px;
+    transform: translate3d(0, -10px, 0) rotate(-270deg);
+    transition-delay: 0.1s;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon-header.toggle .bar.color {
+    width: 20px;
+    opacity: 0;
+    transition: all 0s ease 0s;
+}
+
+/*///////// Responsive Mobile Menu /////////*/
+.click-menu {
+    background: #EA4D44;
+    color: white;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    padding-top: 10%;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-out;
+    z-index: 3;
+}
+
+.click-menu ul,
+.click-menu li {
+    display: block;
+    position: relative;
+    width: auto;
+}
+
+.click-menu li a {
+    display: block;
+    font-size: 18px;
+    padding: 8px 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* //Grid  - Main Page //*/
+#container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header-area header-area"
+        "main-area main-area"
+        "footer-area footer-area";
+}
+
+
+header {
+    grid-area: header-area;
+}
+
+
+main#main {
+    grid-area: main-area;
+    display: grid;
+    grid-template-areas:
+        "section1 section2"
+        "section3 section4"
+        "section5 section6"
+        "section7 section8"
+        "section9 section10";
+}
+
+#section-1 {
+    grid-area: section1;
+    background-color: #59CBE8;
+}
+
+#section-2 {
+    grid-area: section2;
+    background-color: #F04E98;
+}
+
+#section-3 {
+    grid-area: section3;
+    background-color: #f04e98;
+}
+
+#section-4 {
+    grid-area: section4;
+    background-color: #59cbe8;
+}
+
+#section-5 {
+    grid-area: section5;
+    background-color: #59CBE8;
+}
+
+#section-6 {
+    grid-area: section6;
+    background-color: #F04E98;
+}
+
+#section-7 {
+    grid-area: section7;
+    background-color: #F04E98;
+}
+
+#section-8 {
+    grid-area: section8;
+    background-color: #59CBE8;
+}
+
+#section-9 {
+    grid-area: section9;
+    background-color: #59CBE8;
+}
+
+#section-10 {
+    grid-area: section10;
+    background-color: #F04E98;
+}
+
+
+/* Icons - (header) */
+header ul {
+    float: right;
+    display: inline-flex;
+    list-style: none;
+    padding-right: 60px;
+}
+
+header ul i {
+    padding: 9px;
+}
+
+/* Icons - (menu) */
+section i {
+    display: block !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 35px;
+    color: #fff;
+}
+
+section h2 {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+footer {
+    grid-area: footer-area;
+}
+
+
+
+/*  //////////////  NEW PROJECT PAGE ///////// */
+
+main#body-aspect {
+    background-color: #EA4D44;
+}
+
+
+h2#start-project {
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    padding-top: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    left: 70px;
+    background-color: rgb(121, 108, 108);
+    padding-bottom: 10px;
+}
+
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    top: 40px;
+
+}
+
+#single {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: auto;
+    padding-top: 20px;
+}
+
+#group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: auto;
+    padding-top: 20px;
+}
+
+
+/* /////////////SINGLE PROJECT////////////////*/
+
+
+#create-title {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    color: #fff;
+}
+
+#create-body {
+    background-color: #EA4D44;
+}
+
+
+#project-name {
+    width: 300px;
+    padding: 15px;
+    font-size: 15px;
+    margin-top: 20px;
+
+}
+
+#private {
+    padding: 10px;
+}
+
+
+#create {
+    padding: 20px;
+    width: 200px;
+    background-color: #fff;
+    border-style: none;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+
+
+/* /////////////EMPTY PROJECT////////////////*/
+p {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.material-icons.add {
+    font-size: 80px;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+/* The Style for the Footer */
+footer {
+    grid-area: footer-area;
+}
+
+footer h6 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+
+/* Media Queries for Responsive Web Design */
+@media (min-width: 768px) {
+    .KEAlogo {
+        width: 40%;
+        left: 200px;
+    }
+
+    #input[type=text] {
+        width: 50%;
+        left: 160px;
+    }
+
+    input[type=password] {
+        width: 50%;
+        left: 160px;
+    }
+
+    #button {
+        width: 35%;
+        left: 220px;
+    }
+
+    span.psw {
+        position: relative;
+        left: 255px;
+        top: 150px;
+        font-size: 18px;
+    }
+
+
+}
+
+
+@media (min-width: 1400px) {
+
+    /* Kea Logo  */
+    .KEAlogo {
+        width: 30%;
+        left: 460px;
+    }
+
+    #input[type=text] {
+        width: 30%;
+        left: 265px;
+    }
+
+    input[type=password] {
+        width: 30%;
+        left: 285px;
+    }
+
+    #button {
+        width: 30%;
+        left: 500px;
+    }
+
+    span.psw {
+        position: relative;
+        left: 595px;
+        top: 150px;
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+}

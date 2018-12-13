@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronter Web Prototype</title>
+    <!-- Link to the css File -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body id="main-page">
+
+    <!-- Main container -->
+    <div id="container">
+
+        <!-- The header area -->
+        <header id="header">
+            <!-- The Navigation Bar -->
+            <nav>
+                <!-- Logo (link to the Log in Page) -->
+                <a href="index.html"><img src="images/KEAlogo.png" id="logo" alt="KEA"></a>
+
+                <ul>
+                    <li><a href="#"><i class="material-icons menu-icons">chat</i></a></li>
+                    <li><a href="#"><i class="material-icons menu-icons">notification_important</i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Burger Menu Icon + Close -->
+        <div class="icon-header">
+            <span class="icon bar"></span>
+            <span class="icon bar color"></span>
+
+        </div>
+        <!-- Overlay Menu -->
+        <div class="click-menu">
+            <ul>
+                <li><a href="main.html">News</a></li>
+                <li><a href="main.html">Profile</a></li>
+                <li><a href="main.html">Notifications</a></li>
+                <li><a href="main.html">Chat</a></li>
+                <li><a href="main.html">MMD</a></li>
+                <li><a href="main.html">Portfolio</a></li>
+                <li><a href="main.html">Projects</a></li>
+             <li><a href="newProject.html">New Project</a></li>
+
+                <li><a href="index.html">Logout</a></li>
+
+            </ul>
+        </div>
+
+
+        <!-- The main area -->
+        <main id="main">
+
+            <!-- Section 1 -->
+            <section id="section-1">
+
+                <!--  Notifications Icon -->
+
+
+                <i class="material-icons size ">notification_important</i>
+
+                <h2>Notifications</h2>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="section-2">
+
+                <!-- News Icon -->
+                <i class="material-icons size ">library_books</i>
+                <h2>News</h2>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="section-3">
+
+                <!-- Profile Icon -->
+                <i class="material-icons size ">perm_identity</i>
+
+                <h2>Profile</h2>
+
+            </section>
+
+            <!-- Section 4 -->
+            <section id="section-4">
+
+                <!-- Chat  Icon -->
+                <i class="material-icons size ">question_answer</i>
+                <h2>Chat</h2>
+
+            </section>
+
+            <!-- Section 5 -->
+            <section id="section-5">
+
+                <!-- MMD Icon -->
+                <i class="material-icons size ">account_balance</i>
+                <h2>MMD</h2>
+
+            </section>
+
+            <!-- Section 6 -->
+            <section id="section-6">
+
+                <!-- Portfolio Icon -->
+                <i class="material-icons size ">work</i>
+                <h2>Portfolio</h2>
+
+            </section>
+
+            <!-- Section 7 -->
+            <section id="section-7">
+
+                <!--Projects Icon -->
+                <i class="material-icons size ">folder</i>
+                <h2>Projects</h2>
+
+            </section>
+
+            <!-- Section 8 -->
+            <section id="section-8">
+
+                <!-- New Project Icon -->
+                <i onclick=" newProject()" class="material-icons size ">library_add</i>
+                <h2 onclick=" newProject()">New Project</h2>
+
+            </section>
+
+            <!-- Section 9 -->
+            <section id="section-9">
+
+                <!--Reminder Icon -->
+                <i class="material-icons size ">alarm</i>
+                <h2>Reminder</h2>
+
+            </section>
+
+            <!-- Section 10 -->
+            <section id="section-10">
+
+                <!--Settings Icon -->
+                <i class="material-icons size ">build</i>
+                <h2>Settings</h2>
+
+            </section>
+        </main>
+
+        <!-- The footer area -->
+        <footer id="footer">
+
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
